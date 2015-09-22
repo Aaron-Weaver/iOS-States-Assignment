@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C5452121BAB2033009D11A9 /* USStatesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5452111BAB2033009D11A9 /* USStatesTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		1C5452141BAB6281009D11A9 /* states.json in Resources */ = {isa = PBXBuildFile; fileRef = 1C5452131BAB6281009D11A9 /* states.json */; settings = {ASSET_TAGS = (); }; };
 		1C5D09B81BAB16E70004B15C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5D09B71BAB16E70004B15C /* AppDelegate.swift */; };
 		1C5D09BA1BAB16E70004B15C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5D09B91BAB16E70004B15C /* ViewController.swift */; };
 		1C5D09BD1BAB16E70004B15C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C5D09BB1BAB16E70004B15C /* Main.storyboard */; };
@@ -14,6 +16,7 @@
 		1C5D09C21BAB16E70004B15C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C5D09C01BAB16E70004B15C /* LaunchScreen.storyboard */; };
 		1C5D09CD1BAB16E70004B15C /* MWIA1_weaver_aaronTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5D09CC1BAB16E70004B15C /* MWIA1_weaver_aaronTests.swift */; };
 		1C5D09D81BAB16E70004B15C /* MWIA1_weaver_aaronUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5D09D71BAB16E70004B15C /* MWIA1_weaver_aaronUITests.swift */; };
+		1C60DB311BADC89B00D2E2C9 /* StatesActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C60DB301BADC89B00D2E2C9 /* StatesActions.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1C5452111BAB2033009D11A9 /* USStatesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = USStatesTableViewController.swift; sourceTree = "<group>"; };
+		1C5452131BAB6281009D11A9 /* states.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = states.json; sourceTree = "<group>"; };
 		1C5D09B41BAB16E70004B15C /* MWIA1_weaver_aaron.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MWIA1_weaver_aaron.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C5D09B71BAB16E70004B15C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1C5D09B91BAB16E70004B15C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +52,7 @@
 		1C5D09D31BAB16E70004B15C /* MWIA1_weaver_aaronUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MWIA1_weaver_aaronUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C5D09D71BAB16E70004B15C /* MWIA1_weaver_aaronUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MWIA1_weaver_aaronUITests.swift; sourceTree = "<group>"; };
 		1C5D09D91BAB16E70004B15C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1C60DB301BADC89B00D2E2C9 /* StatesActions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatesActions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +80,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C5452151BAB6286009D11A9 /* Res */ = {
+			isa = PBXGroup;
+			children = (
+				1C5452131BAB6281009D11A9 /* states.json */,
+			);
+			name = Res;
+			sourceTree = "<group>";
+		};
 		1C5D09AB1BAB16E70004B15C = {
 			isa = PBXGroup;
 			children = (
@@ -97,12 +111,15 @@
 		1C5D09B61BAB16E70004B15C /* MWIA1_weaver_aaron */ = {
 			isa = PBXGroup;
 			children = (
+				1C60DB2F1BADC87B00D2E2C9 /* Data */,
+				1C5452151BAB6286009D11A9 /* Res */,
 				1C5D09B71BAB16E70004B15C /* AppDelegate.swift */,
 				1C5D09B91BAB16E70004B15C /* ViewController.swift */,
 				1C5D09BB1BAB16E70004B15C /* Main.storyboard */,
 				1C5D09BE1BAB16E70004B15C /* Assets.xcassets */,
 				1C5D09C01BAB16E70004B15C /* LaunchScreen.storyboard */,
 				1C5D09C31BAB16E70004B15C /* Info.plist */,
+				1C5452111BAB2033009D11A9 /* USStatesTableViewController.swift */,
 			);
 			path = MWIA1_weaver_aaron;
 			sourceTree = "<group>";
@@ -123,6 +140,14 @@
 				1C5D09D91BAB16E70004B15C /* Info.plist */,
 			);
 			path = MWIA1_weaver_aaronUITests;
+			sourceTree = "<group>";
+		};
+		1C60DB2F1BADC87B00D2E2C9 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				1C60DB301BADC89B00D2E2C9 /* StatesActions.swift */,
+			);
+			name = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +259,7 @@
 				1C5D09C21BAB16E70004B15C /* LaunchScreen.storyboard in Resources */,
 				1C5D09BF1BAB16E70004B15C /* Assets.xcassets in Resources */,
 				1C5D09BD1BAB16E70004B15C /* Main.storyboard in Resources */,
+				1C5452141BAB6281009D11A9 /* states.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,7 +284,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C60DB311BADC89B00D2E2C9 /* StatesActions.swift in Sources */,
 				1C5D09BA1BAB16E70004B15C /* ViewController.swift in Sources */,
+				1C5452121BAB2033009D11A9 /* USStatesTableViewController.swift in Sources */,
 				1C5D09B81BAB16E70004B15C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -484,6 +512,7 @@
 				1C5D09DE1BAB16E70004B15C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1C5D09DF1BAB16E70004B15C /* Build configuration list for PBXNativeTarget "MWIA1_weaver_aaronTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +521,7 @@
 				1C5D09E11BAB16E70004B15C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1C5D09E21BAB16E70004B15C /* Build configuration list for PBXNativeTarget "MWIA1_weaver_aaronUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +530,7 @@
 				1C5D09E41BAB16E70004B15C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
