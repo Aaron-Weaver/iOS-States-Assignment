@@ -10,17 +10,16 @@ import Foundation
 
 class StatesActions
 {
-    private var statesDict: Dictionary<String, [String]>!
+    private var statesDict: Dictionary<String, [StateInformation]>!
     
     init(jsonFileName: String)
     {
         self.statesDict = readStatesFromJson(jsonFileName)
-        print(self.statesDict)
     }
     
-    private func readStatesFromJson(jsonFileName: String) -> Dictionary<String, [String]>!
+    private func readStatesFromJson(jsonFileName: String) -> Dictionary<String, [StateInformation]>!
     {
-        var statesDict: Dictionary<String, [String]>! = Dictionary<String, [String]>()
+        var statesDict: Dictionary<String, [StateInformation]>! = Dictionary<String, [StateInformation]>()
         
         print("Starting view")
         if let jsonFile = NSBundle.mainBundle().pathForResource(jsonFileName, ofType: "json")
@@ -39,20 +38,26 @@ class StatesActions
                     
                     for var i = 0; i < json.count; i++
                     {
-                        let stateAlphabetGroup = json[i]
-                        for val in UnicodeScalar("A").value...UnicodeScalar("Z").value
+                        if let stateAlphabetGroup = json[i]! as? [String: AnyObject]
                         {
-                            if let stateGroup = stateAlphabetGroup[String(Character(UnicodeScalar(val)))] as? NSArray
+                            for val in UnicodeScalar("A").value...UnicodeScalar("Z").value
                             {
-                                var statesList = [(String)]()
-                                
-                                for element in stateGroup
+                                if let stateGroup = stateAlphabetGroup[String(Character(UnicodeScalar(val)))] as? [[String: String]]
                                 {
-                                    statesList.append(element["name"] as! String)
+                                    
+                                    var statesList = [(StateInformation)]()
+                                    
+                                    
+                                    for element in stateGroup
+                                    {
+                                        statesList.append(StateInformation(stateTitle: String(element["name"]!), stateSubTitle: String(element["abbreviation"]!)))
+                                    }
+                                    
+                                    print(String(Character(UnicodeScalar(val))))
+                                    
+                                    statesDict[String(Character(UnicodeScalar(val)))] = statesList
+                                    break
                                 }
-                                
-                                statesDict[String(Character(UnicodeScalar(val)))] = statesList
-                                break;
                             }
                         }
                     }
@@ -67,9 +72,9 @@ class StatesActions
         return statesDict
     }
     
-    func getStatesBeginningWithLetter(letter: String) -> NSArray
+    func getStatesBeginningWithLetter(letter: String) -> [(StateInformation)]!
     {
-        return self.statesDict[letter]! as NSArray
+        return self.statesDict[letter] as [(StateInformation)]!
     }
     
     func getSortedListOfIndexLetters() -> [(String)]
