@@ -17,6 +17,7 @@ class USStatesTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print("lol")
         states = StatesActions(jsonFileName: "states")
         numberOfHeaders = states.getNumberOfStateGroups()
         stateSectionTitles = states.getSortedListOfIndexLetters()
@@ -32,8 +33,12 @@ class USStatesTableViewController: UITableViewController {
         return numberOfHeaders
     }
     
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return states.getStatesBeginningWithLetter(self.stateSectionTitles[section]).count
+    }
+    
     override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        var headerCell = tableView.dequeueReusableCellWithIdentifier("SectionHeader") as? SectionHeaderCell
+        var headerCell = self.tableView.dequeueReusableCellWithIdentifier("SectionHeader") as? SectionHeaderCell
         
         if headerCell == nil
         {
@@ -47,7 +52,7 @@ class USStatesTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        var stateInfoCell = tableView.dequeueReusableCellWithIdentifier("StateInfoCell") as? StateInformationCell
+        var stateInfoCell = self.tableView.dequeueReusableCellWithIdentifier("StateInfoCell") as? StateInformationCell
         
         if stateInfoCell == nil
         {
@@ -66,10 +71,6 @@ class USStatesTableViewController: UITableViewController {
         return stateInfoCell!
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return states.getStatesBeginningWithLetter(self.stateSectionTitles[section]).count
-    }
-    
     override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat
     {
         return 20
@@ -77,10 +78,5 @@ class USStatesTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 75
-    }
-    
-    private func getAllHeadersAndSections()
-    {
-        
     }
 }

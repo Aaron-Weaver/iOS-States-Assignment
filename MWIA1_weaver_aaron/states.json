@@ -3,19 +3,23 @@
       "A":[
          {
             "name":"Alabama",
-            "abbreviation":"AL"
+            "abbreviation":"AL",
+            "nickname":"Yellowhammer State"
          },
          {
             "name":"Alaska",
-            "abbreviation":"AK"
+            "abbreviation":"AK",
+            "nickname":"The Last Frontier"
          },
          {
             "name":"Arizona",
-            "abbreviation":"AZ"
+            "abbreviation":"AZ",
+            "nickname":"The Grand Canyon State"
          },
          {
             "name":"Arkansas",
-            "abbreviation":"AR"
+            "abbreviation":"AR",
+            "nickname": "The Natural State"
          }
       ]
    },
@@ -23,15 +27,18 @@
       "C":[
          {
             "name":"California",
-            "abbreviation":"CA"
+            "abbreviation":"CA",
+            "nickname":"The Golden State"
          },
          {
             "name":"Colorado",
-            "abbreviation":"CO"
+            "abbreviation":"CO",
+            "nickname":"The Centennial State"
          },
          {
             "name":"Connecticut",
-            "abbreviation":"CT"
+            "abbreviation":"CT",
+            "nickname":"The Constitution State"
          }
       ]
    },
@@ -39,7 +46,8 @@
       "D":[
          {
             "name":"Delaware",
-            "abbreviation":"DE"
+            "abbreviation":"DE",
+            "nickname":"The First State"
          },
       ]
    },
@@ -47,7 +55,8 @@
       "F":[
          {
             "name":"Florida",
-            "abbreviation":"FL"
+            "abbreviation":"FL",
+            "nickname":"The Sunshine State"
          }
       ]
    },
@@ -55,7 +64,8 @@
       "G":[
          {
             "name":"Georgia",
-            "abbreviation":"GA"
+            "abbreviation":"GA",
+            "nickname":"The Peach State"
          },
       ]
    },
@@ -63,7 +73,8 @@
       "H":[
          {
             "name":"Hawaii",
-            "abbreviation":"HI"
+            "abbreviation":"HI",
+            "nickname":"The Aloha State"
          }
       ]
    },
@@ -71,19 +82,23 @@
       "I":[
          {
             "name":"Idaho",
-            "abbreviation":"ID"
+            "abbreviation":"ID",
+            "nickname":"The Gem State"
          },
          {
             "name":"Illinois",
-            "abbreviation":"IL"
+            "abbreviation":"IL",
+            "nickname":"Prairie State"
          },
          {
             "name":"Indiana",
-            "abbreviation":"IN"
+            "abbreviation":"IN",
+            "nickname":"The Hoosier State"
          },
          {
             "name":"Iowa",
-            "abbreviation":"IA"
+            "abbreviation":"IA",
+            "nickname":"The Hawkeye State"
          }
       ]
    },
@@ -91,11 +106,13 @@
       "K":[
          {
             "name":"Kansas",
-            "abbreviation":"KS"
+            "abbreviation":"KS",
+            "nickname":"The Sunflower State"
          },
          {
             "name":"Kentucky",
-            "abbreviation":"KY"
+            "abbreviation":"KY",
+            "nickname":"The Bluegrass State"
          }
       ]
    },
@@ -103,7 +120,8 @@
       "L":[
          {
             "name":"Louisiana",
-            "abbreviation":"LA"
+            "abbreviation":"LA",
+            "nickname":"The Pelican State"
          }
       ]
    },
@@ -111,35 +129,43 @@
       "M":[
          {
             "name":"Maine",
-            "abbreviation":"ME"
+            "abbreviation":"ME",
+            "nickname":"The Pine Tree State"
          },
          {
             "name":"Maryland",
-            "abbreviation":"MD"
+            "abbreviation":"MD",
+            "nickname":"The Old Line State"
          },
          {
             "name":"Massachusetts",
-            "abbreviation":"MA"
+            "abbreviation":"MA",
+            "nickname":"The Bay State"
          },
          {
             "name":"Michigan",
-            "abbreviation":"MI"
+            "abbreviation":"MI",
+            "nickname":"The Great Lake State"
          },
          {
             "name":"Minnesota",
-            "abbreviation":"MN"
+            "abbreviation":"MN",
+            "nickname":"The North Star State"
          },
          {
             "name":"Mississippi",
-            "abbreviation":"MS"
+            "abbreviation":"MS",
+            "nickname":"The Magnolia State"
          },
          {
             "name":"Missouri",
-            "abbreviation":"MO"
+            "abbreviation":"MO",
+            "nickname":"The Show Me State"
          },
          {
             "name":"Montana",
-            "abbreviation":"MT"
+            "abbreviation":"MT",
+            "nickname":"The Treasure State"
          }
       ]
    },
@@ -147,35 +173,43 @@
       "N":[
          {
             "name":"Nebraska",
-            "abbreviation":"NE"
+            "abbreviation":"NE",
+            "nickname":"The Cornhusker State"
          },
          {
             "name":"Nevada",
-            "abbreviation":"NV"
+            "abbreviation":"NV",
+            "nickname":"The Silver State"
          },
          {
             "name":"New Hampshire",
-            "abbreviation":"NH"
+            "abbreviation":"NH",
+            "nickname":"The Granite State"
          },
          {
             "name":"New Jersey",
-            "abbreviation":"NJ"
+            "abbreviation":"NJ",
+            "nickname":"The Garden State"
          },
          {
             "name":"New Mexico",
-            "abbreviation":"NM"
+            "abbreviation":"NM",
+            "nickname":"The Land of Enchantment"
          },
          {
             "name":"New York",
-            "abbreviation":"NY"
+            "abbreviation":"NY",
+            "nickname":"The Empire State"
          },
          {
             "name":"North Carolina",
-            "abbreviation":"NC"
+            "abbreviation":"NC",
+            "nickname":"The Tar Heel State"
          },
          {
             "name":"North Dakota",
-            "abbreviation":"ND"
+            "abbreviation":"ND",
+            "nickname":"The Peace Garden State"
          },
       ]
    },
@@ -183,15 +217,18 @@
       "O":[
          {
             "name":"Ohio",
-            "abbreviation":"OH"
+            "abbreviation":"OH",
+            "nickname":"The Buckeye State"
          },
          {
             "name":"Oklahoma",
-            "abbreviation":"OK"
+            "abbreviation":"OK",
+            "nickname":"The Sooner State"
          },
          {
             "name":"Oregon",
-            "abbreviation":"OR"
+            "abbreviation":"OR",
+            "nickname":"The Beaver State"
          }
       ]
    },
@@ -199,7 +236,8 @@
       "P":[
          {
             "name":"Pennsylvania",
-            "abbreviation":"PA"
+            "abbreviation":"PA",
+            "nickname":"The Keystone State"
          },
       ]
    },
@@ -207,7 +245,8 @@
       "R":[
          {
             "name":"Rhode Island",
-            "abbreviation":"RI"
+            "abbreviation":"RI",
+            "nickname":"The Ocean State"
          }
       ]
    },
@@ -215,11 +254,13 @@
       "S":[
          {
             "name":"South Carolina",
-            "abbreviation":"SC"
+            "abbreviation":"SC",
+            "nickname":"The Palmetto State"
          },
          {
             "name":"South Dakota",
-            "abbreviation":"SD"
+            "abbreviation":"SD",
+            "nickname":"Mount Rushmore State"
          }
       ]
    },
@@ -227,11 +268,13 @@
       "T":[
          {
             "name":"Tennessee",
-            "abbreviation":"TN"
+            "abbreviation":"TN",
+            "nickname":"The Volunteer State"
          },
          {
             "name":"Texas",
-            "abbreviation":"TX"
+            "abbreviation":"TX",
+            "nickname":"The Lone Star State"
          }
       ]
    },
@@ -239,7 +282,8 @@
       "U":[
          {
             "name":"Utah",
-            "abbreviation":"UT"
+            "abbreviation":"UT",
+            "nickname":"The Beehive State"
          }
       ]
    },
@@ -247,11 +291,13 @@
       "V":[
          {
             "name":"Vermont",
-            "abbreviation":"VT"
+            "abbreviation":"VT",
+            "nickname":"The Green Mountain State"
          },
          {
             "name":"Virginia",
-            "abbreviation":"VA"
+            "abbreviation":"VA",
+            "nickname":"The Old Dominion State"
          }
       ]
    },
@@ -259,19 +305,23 @@
       "W":[
          {
             "name":"Washington",
-            "abbreviation":"WA"
+            "abbreviation":"WA",
+            "nickname":"The Evergreen State"
          },
          {
             "name":"West Virginia",
-            "abbreviation":"WV"
+            "abbreviation":"WV",
+            "nickname":"The Mountain State"
          },
          {
             "name":"Wisconsin",
-            "abbreviation":"WI"
+            "abbreviation":"WI",
+            "nickname":"The Cheese State"
          },
          {
             "name":"Wyoming",
-            "abbreviation":"WY"
+            "abbreviation":"WY",
+            "nickname":"The Cowboy State"
          }
       ]
    }

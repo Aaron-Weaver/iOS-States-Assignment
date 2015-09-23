@@ -21,10 +21,8 @@ class StatesActions
     {
         var statesDict: Dictionary<String, [StateInformation]>! = Dictionary<String, [StateInformation]>()
         
-        print("Starting view")
         if let jsonFile = NSBundle.mainBundle().pathForResource(jsonFileName, ofType: "json")
         {
-            print("File Exists")
             if let jsonData = NSData(contentsOfFile: jsonFile)
             {
                 //print(NSString(data: jsonData, encoding: NSUTF8StringEncoding)!)
@@ -32,8 +30,6 @@ class StatesActions
                 do
                 {
                     let json = try NSJSONSerialization.JSONObjectWithData(jsonData, options: NSJSONReadingOptions.MutableContainers)
-                    print("made it")
-                    print(json[0])
                     //let stateArr = try NSJSONSerialization.JSONObjectWithData(json[0] as! NSData, options: NSJSONReadingOptions.MutableContainers)
                     
                     for var i = 0; i < json.count; i++
@@ -50,10 +46,8 @@ class StatesActions
                                     
                                     for element in stateGroup
                                     {
-                                        statesList.append(StateInformation(stateTitle: String(element["name"]!), stateSubTitle: String(element["abbreviation"]!)))
+                                        statesList.append(StateInformation(stateTitle: String(element["name"]!), stateSubTitle: String(element["nickname"]!)))
                                     }
-                                    
-                                    print(String(Character(UnicodeScalar(val))))
                                     
                                     statesDict[String(Character(UnicodeScalar(val)))] = statesList
                                     break

@@ -10,8 +10,15 @@ import Foundation
 
 class StateInformation
 {
-    var stateTitle: String!
-    var stateSubTitle: String!
+    var stateTitle: String?
+    var stateSubTitle: String?
+    var stateImageName: String?
+    var stateVisited: Bool?
+    
+    init()
+    {
+        
+    }
     
     init(stateTitle: String, stateSubTitle: String)
     {
