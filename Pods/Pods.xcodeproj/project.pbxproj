@@ -1,0 +1,363 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		541AD52B48964125953CD91E0B5FE81F /* Pods-MWIA1_weaver_aaron-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D7B69B07CA0F2FFBF73EA62732FAA09 /* Pods-MWIA1_weaver_aaron-dummy.m */; };
+		5E3AF2DC44D9217B43CEB41B20E4CFCE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56308767794DE6ECBF1970BAAB419A4D /* Foundation.framework */; };
+		6C8F0268A43C3215CB121F720A172B0B /* Pods-MWIA1_weaver_aaron-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AE72D44E2FA93AF12D734B77BC42DDF7 /* Pods-MWIA1_weaver_aaron-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0944DC324D4ED81D566D20B0CE91DA23 /* Pods-MWIA1_weaver_aaron.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MWIA1_weaver_aaron.debug.xcconfig"; sourceTree = "<group>"; };
+		213B1724C62BE8BC65F92A9BC1A24B5B /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = Frameworks/GoogleMaps.framework; sourceTree = "<group>"; };
+		2ED886A344C95CACC39E0DAB3333F974 /* Pods-MWIA1_weaver_aaron.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-MWIA1_weaver_aaron.modulemap"; sourceTree = "<group>"; };
+		56308767794DE6ECBF1970BAAB419A4D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		62B2D25C865612D81247F57049973646 /* Pods-MWIA1_weaver_aaron-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MWIA1_weaver_aaron-acknowledgements.markdown"; sourceTree = "<group>"; };
+		6B37A129EEF48A472699490E55DE7DD7 /* Pods-MWIA1_weaver_aaron-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MWIA1_weaver_aaron-resources.sh"; sourceTree = "<group>"; };
+		7D7B69B07CA0F2FFBF73EA62732FAA09 /* Pods-MWIA1_weaver_aaron-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MWIA1_weaver_aaron-dummy.m"; sourceTree = "<group>"; };
+		9E17161130B27DB46F01569D1C6C5443 /* GoogleMaps.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = Frameworks/GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
+		9FACB7ADD09BBF58433B08CEEC893AA6 /* Pods-MWIA1_weaver_aaron-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MWIA1_weaver_aaron-acknowledgements.plist"; sourceTree = "<group>"; };
+		ADA24C15BD8DE4EE0BA2767B37444940 /* Pods_MWIA1_weaver_aaron.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MWIA1_weaver_aaron.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE72D44E2FA93AF12D734B77BC42DDF7 /* Pods-MWIA1_weaver_aaron-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MWIA1_weaver_aaron-umbrella.h"; sourceTree = "<group>"; };
+		AE74211B899C5B0B4F6829258D98883C /* Pods-MWIA1_weaver_aaron.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MWIA1_weaver_aaron.release.xcconfig"; sourceTree = "<group>"; };
+		B6BB4F00E393C54CE1CCA170A832E6D6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		D76744FE473DFD08A442C94B9FADBFC2 /* Pods-MWIA1_weaver_aaron-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MWIA1_weaver_aaron-frameworks.sh"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CA918CEC9CF33F6F75599707DAE1E6ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E3AF2DC44D9217B43CEB41B20E4CFCE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		53F661C0CA7190D2CF05023FB33D61E4 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				56308767794DE6ECBF1970BAAB419A4D /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		552C04C99B9EC7FD6897DEAA23CA97B2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				213B1724C62BE8BC65F92A9BC1A24B5B /* GoogleMaps.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6B9DDBFD34805D0CECB3FE7AA6B7B594 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AAA2E410E8C08C05E23E73307973F577 /* GoogleMaps */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		788A2333342F71735B04D963C35B796E /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				79EF1AB5BADBAB91BC93E6A18D2F7264 /* Pods-MWIA1_weaver_aaron */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		79EF1AB5BADBAB91BC93E6A18D2F7264 /* Pods-MWIA1_weaver_aaron */ = {
+			isa = PBXGroup;
+			children = (
+				B6BB4F00E393C54CE1CCA170A832E6D6 /* Info.plist */,
+				2ED886A344C95CACC39E0DAB3333F974 /* Pods-MWIA1_weaver_aaron.modulemap */,
+				62B2D25C865612D81247F57049973646 /* Pods-MWIA1_weaver_aaron-acknowledgements.markdown */,
+				9FACB7ADD09BBF58433B08CEEC893AA6 /* Pods-MWIA1_weaver_aaron-acknowledgements.plist */,
+				7D7B69B07CA0F2FFBF73EA62732FAA09 /* Pods-MWIA1_weaver_aaron-dummy.m */,
+				D76744FE473DFD08A442C94B9FADBFC2 /* Pods-MWIA1_weaver_aaron-frameworks.sh */,
+				6B37A129EEF48A472699490E55DE7DD7 /* Pods-MWIA1_weaver_aaron-resources.sh */,
+				AE72D44E2FA93AF12D734B77BC42DDF7 /* Pods-MWIA1_weaver_aaron-umbrella.h */,
+				0944DC324D4ED81D566D20B0CE91DA23 /* Pods-MWIA1_weaver_aaron.debug.xcconfig */,
+				AE74211B899C5B0B4F6829258D98883C /* Pods-MWIA1_weaver_aaron.release.xcconfig */,
+			);
+			name = "Pods-MWIA1_weaver_aaron";
+			path = "Target Support Files/Pods-MWIA1_weaver_aaron";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				6B9DDBFD34805D0CECB3FE7AA6B7B594 /* Pods */,
+				CCA510CFBEA2D207524CDA0D73C3B561 /* Products */,
+				788A2333342F71735B04D963C35B796E /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		AAA2E410E8C08C05E23E73307973F577 /* GoogleMaps */ = {
+			isa = PBXGroup;
+			children = (
+				552C04C99B9EC7FD6897DEAA23CA97B2 /* Frameworks */,
+				BA6CC55F7C3DC98EA32DB381E76D8A4B /* Resources */,
+			);
+			path = GoogleMaps;
+			sourceTree = "<group>";
+		};
+		BA6CC55F7C3DC98EA32DB381E76D8A4B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9E17161130B27DB46F01569D1C6C5443 /* GoogleMaps.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				53F661C0CA7190D2CF05023FB33D61E4 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CCA510CFBEA2D207524CDA0D73C3B561 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ADA24C15BD8DE4EE0BA2767B37444940 /* Pods_MWIA1_weaver_aaron.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		A048B82427C21B3AE0AA1EE5DC7B9F36 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C8F0268A43C3215CB121F720A172B0B /* Pods-MWIA1_weaver_aaron-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		1CE916C56DE4F76D3D9007AF9BF9FB0F /* Pods-MWIA1_weaver_aaron */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E1E14F48B71C9E5BFD10BB5BE7881B0A /* Build configuration list for PBXNativeTarget "Pods-MWIA1_weaver_aaron" */;
+			buildPhases = (
+				7B66C51605C5BCB378712DF86FD4ACF7 /* Sources */,
+				CA918CEC9CF33F6F75599707DAE1E6ED /* Frameworks */,
+				A048B82427C21B3AE0AA1EE5DC7B9F36 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-MWIA1_weaver_aaron";
+			productName = "Pods-MWIA1_weaver_aaron";
+			productReference = ADA24C15BD8DE4EE0BA2767B37444940 /* Pods_MWIA1_weaver_aaron.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = CCA510CFBEA2D207524CDA0D73C3B561 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1CE916C56DE4F76D3D9007AF9BF9FB0F /* Pods-MWIA1_weaver_aaron */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7B66C51605C5BCB378712DF86FD4ACF7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				541AD52B48964125953CD91E0B5FE81F /* Pods-MWIA1_weaver_aaron-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		436EDAF6BE8CC7F535360D7B0049713C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE74211B899C5B0B4F6829258D98883C /* Pods-MWIA1_weaver_aaron.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-MWIA1_weaver_aaron/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-MWIA1_weaver_aaron/Pods-MWIA1_weaver_aaron.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_MWIA1_weaver_aaron;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9EB645C612834738B99727720210C23E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		E39CD1E764776175CB82EEC82A6C9948 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FF22506E336420ED5ED0FE23F9F33E95 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0944DC324D4ED81D566D20B0CE91DA23 /* Pods-MWIA1_weaver_aaron.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-MWIA1_weaver_aaron/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-MWIA1_weaver_aaron/Pods-MWIA1_weaver_aaron.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_MWIA1_weaver_aaron;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9EB645C612834738B99727720210C23E /* Debug */,
+				E39CD1E764776175CB82EEC82A6C9948 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E1E14F48B71C9E5BFD10BB5BE7881B0A /* Build configuration list for PBXNativeTarget "Pods-MWIA1_weaver_aaron" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF22506E336420ED5ED0FE23F9F33E95 /* Debug */,
+				436EDAF6BE8CC7F535360D7B0049713C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
