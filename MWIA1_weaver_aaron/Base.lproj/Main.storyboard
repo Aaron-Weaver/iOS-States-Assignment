@@ -20,17 +20,17 @@
                     <navigationItem key="navigationItem" title="US States" id="ey2-cs-QMP"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <segue destination="mfG-xW-lhI" kind="show" id="uP6-wg-u7L"/>
+                        <segue destination="mfG-xW-lhI" kind="show" identifier="stateDetailSegue" id="uP6-wg-u7L"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="az0-hA-Grm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="452.5" y="576.5"/>
         </scene>
-        <!--View Controller-->
+        <!--State View Controller-->
         <scene sceneID="1du-Qt-FqL">
             <objects>
-                <viewController id="mfG-xW-lhI" sceneMemberID="viewController">
+                <viewController id="mfG-xW-lhI" customClass="StateViewController" customModule="MWIA1_weaver_aaron" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ja3-vf-6Sf"/>
                         <viewControllerLayoutGuide type="bottom" id="zZV-ho-sdy"/>
@@ -49,17 +49,29 @@
         <!--Navigation Controller-->
         <scene sceneID="uS0-iY-cTs">
             <objects>
-                <navigationController id="tap-3x-Geh" sceneMemberID="viewController">
+                <navigationController toolbarHidden="NO" id="tap-3x-Geh" sceneMemberID="viewController">
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="V78-dV-dp5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="OTh-VS-qBW">
+                        <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="GEc-Zt-dvt" kind="relationship" relationship="rootViewController" id="Pez-w6-Gmm"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j4t-MX-ARx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Wm8-2B-rAj">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <items>
+                        <barButtonItem title="Item" id="jRe-36-4EQ"/>
+                    </items>
+                </toolbar>
             </objects>
             <point key="canvasLocation" x="-138.5" y="576.5"/>
         </scene>

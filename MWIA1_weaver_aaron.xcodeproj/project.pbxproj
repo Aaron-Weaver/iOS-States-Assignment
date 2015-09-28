@@ -10,7 +10,7 @@
 		1C5452121BAB2033009D11A9 /* USStatesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5452111BAB2033009D11A9 /* USStatesTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		1C5452141BAB6281009D11A9 /* states.json in Resources */ = {isa = PBXBuildFile; fileRef = 1C5452131BAB6281009D11A9 /* states.json */; settings = {ASSET_TAGS = (); }; };
 		1C5D09B81BAB16E70004B15C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5D09B71BAB16E70004B15C /* AppDelegate.swift */; };
-		1C5D09BA1BAB16E70004B15C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5D09B91BAB16E70004B15C /* ViewController.swift */; };
+		1C5D09BA1BAB16E70004B15C /* StateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C5D09B91BAB16E70004B15C /* StateViewController.swift */; };
 		1C5D09BD1BAB16E70004B15C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C5D09BB1BAB16E70004B15C /* Main.storyboard */; };
 		1C5D09BF1BAB16E70004B15C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C5D09BE1BAB16E70004B15C /* Assets.xcassets */; };
 		1C5D09C21BAB16E70004B15C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C5D09C01BAB16E70004B15C /* LaunchScreen.storyboard */; };
@@ -50,7 +50,7 @@
 		1C5452131BAB6281009D11A9 /* states.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = states.json; sourceTree = "<group>"; };
 		1C5D09B41BAB16E70004B15C /* MWIA1_weaver_aaron.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MWIA1_weaver_aaron.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C5D09B71BAB16E70004B15C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1C5D09B91BAB16E70004B15C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1C5D09B91BAB16E70004B15C /* StateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateViewController.swift; sourceTree = "<group>"; };
 		1C5D09BC1BAB16E70004B15C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1C5D09BE1BAB16E70004B15C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1C5D09C11BAB16E70004B15C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -140,7 +140,7 @@
 				1C60DB2F1BADC87B00D2E2C9 /* Data */,
 				1C5452151BAB6286009D11A9 /* Res */,
 				1C5D09B71BAB16E70004B15C /* AppDelegate.swift */,
-				1C5D09B91BAB16E70004B15C /* ViewController.swift */,
+				1C5D09B91BAB16E70004B15C /* StateViewController.swift */,
 				1C5D09BB1BAB16E70004B15C /* Main.storyboard */,
 				1C5D09BE1BAB16E70004B15C /* Assets.xcassets */,
 				1C5D09C01BAB16E70004B15C /* LaunchScreen.storyboard */,
@@ -395,7 +395,7 @@
 				1C6272981BB1B1AD0020F9C8 /* SectionHeaderCell.swift in Sources */,
 				1C6272961BB1B18A0020F9C8 /* StateInformationCell.swift in Sources */,
 				1C60DB311BADC89B00D2E2C9 /* StatesActions.swift in Sources */,
-				1C5D09BA1BAB16E70004B15C /* ViewController.swift in Sources */,
+				1C5D09BA1BAB16E70004B15C /* StateViewController.swift in Sources */,
 				1C5452121BAB2033009D11A9 /* USStatesTableViewController.swift in Sources */,
 				1C5D09B81BAB16E70004B15C /* AppDelegate.swift in Sources */,
 				1C62729F1BB1B7BE0020F9C8 /* StateInformation.swift in Sources */,
@@ -541,6 +541,41 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MWIA1_weaver_aaron/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-l\"c++\"",
+					"-l\"icucore\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AVFoundation\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"CoreBluetooth\"",
+					"-framework",
+					"\"CoreData\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreLocation\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"GLKit\"",
+					"-framework",
+					"\"GoogleMaps\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"OpenGLES\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.appweava.MWIA1-weaver-aaron";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -553,6 +588,41 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MWIA1_weaver_aaron/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-l\"c++\"",
+					"-l\"icucore\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AVFoundation\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"CoreBluetooth\"",
+					"-framework",
+					"\"CoreData\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreLocation\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"GLKit\"",
+					"-framework",
+					"\"GoogleMaps\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"OpenGLES\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.appweava.MWIA1-weaver-aaron";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

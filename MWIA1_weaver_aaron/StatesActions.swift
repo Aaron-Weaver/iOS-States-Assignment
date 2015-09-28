@@ -10,11 +10,65 @@ import Foundation
 
 class StatesActions
 {
-    private var statesDict: Dictionary<String, [StateInformation]>!
+    var statesDict: Dictionary<String, [StateInformation]>!
     
     init(jsonFileName: String)
     {
         self.statesDict = readStatesFromJson(jsonFileName)
+    }
+    
+    init()
+    {
+        
+    }
+    
+    private func getBoundariesForState(jsonFileName: String, stateName: String) -> [BoundaryPoint]!
+    {
+        var stateBoundaries = [BoundaryPoint]()
+        
+        if let jsonFile = NSBundle.mainBundle().pathForResource(jsonFileName, ofType: "json")
+        {
+            if let jsonData = NSData(contentsOfFile: jsonFile)
+            {
+                do
+                {
+                    let json = try NSJSONSerialization.JSONObjectWithData(jsonData, options: NSJSONReadingOptions.MutableContainers)
+                    
+                    let statesJson = json["states"] as! [String:AnyObject!]
+                    let stateArray = statesJson["state"]! as! [AnyObject!]
+                    
+                    for var i = 0; i < stateArray.count; i++
+                    {
+                        let state = stateArray[i] as! [String:AnyObject!]
+                        
+                        let stateJsonName = state["-name"] as! String!
+                        
+                        if stateJsonName == stateName
+                        {
+                            let stateBoundariesJson = state["point"] as! [[String:String!]]
+                            
+                            for element in stateBoundariesJson
+                            {
+                                let latitude = element["-lat"] as String!
+                                let longitude = element["-lng"] as String!
+                                
+                                print(latitude)
+                                print(longitude)
+                                
+                                stateBoundaries.append(BoundaryPoint(latitude: Double(latitude)!, longitude: Double(longitude)!))
+                            }
+                            
+                            return stateBoundaries
+                        }
+                    }
+                }
+                catch
+                {
+                    
+                }
+            }
+        }
+        return stateBoundaries
     }
     
     private func readStatesFromJson(jsonFileName: String) -> Dictionary<String, [StateInformation]>!
@@ -46,7 +100,15 @@ class StatesActions
                                     
                                     for element in stateGroup
                                     {
-                                        statesList.append(StateInformation(stateTitle: String(element["name"]!), stateSubTitle: String(element["nickname"]!)))
+                                        let stateInfo = StateInformation(stateTitle: String(element["name"]!), stateSubTitle: String(element["nickname"]!))
+                                        stateInfo.stateBoundaries = self.getBoundariesForState("state_boundaries", stateName: stateInfo.stateTitle!)
+                                        
+                                        for element in stateInfo.stateBoundaries!
+                                        {
+                                            print(String(element.latitude) + "  " + String(element.longitude))
+                                        }
+        
+                                        statesList.append(stateInfo)
                                     }
                                     
                                     statesDict[String(Character(UnicodeScalar(val)))] = statesList

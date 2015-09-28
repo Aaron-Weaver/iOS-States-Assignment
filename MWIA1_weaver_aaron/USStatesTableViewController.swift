@@ -71,6 +71,17 @@ class USStatesTableViewController: UITableViewController {
         return stateInfoCell!
     }
     
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.performSegueWithIdentifier("stateDetailSegue", sender: self)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let detailView: StateViewController  = segue.destinationViewController as! StateViewController
+        let selectedRow: NSIndexPath = self.tableView.indexPathForSelectedRow!
+        let stateInCell: StateInformation! = states.getStatesBeginningWithLetter(self.stateSectionTitles[selectedRow.section])![selectedRow.row]
+        detailView.stateInfo = stateInCell
+    }
+    
     override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat
     {
         return 20

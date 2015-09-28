@@ -12,8 +12,8 @@ class StateInformation
 {
     var stateTitle: String?
     var stateSubTitle: String?
-    var stateImageName: String?
     var stateVisited: Bool?
+    var stateBoundaries: [BoundaryPoint]!
     
     init()
     {
@@ -24,5 +24,41 @@ class StateInformation
     {
         self.stateTitle = stateTitle
         self.stateSubTitle = stateSubTitle
+    }
+    
+    func getStateCenterPoint() -> BoundaryPoint
+    {
+        
+        let numPoints = Double((stateBoundaries?.count)!)
+        var x: Double = 0
+        var y: Double = 0
+        
+        for element in stateBoundaries!
+        {
+            print(String(element.longitude))
+            x += element.latitude
+            y += element.longitude
+        }
+        
+        x = x / numPoints
+        y = y / numPoints
+        
+        return BoundaryPoint(latitude: x, longitude: y)
+    }
+}
+
+class BoundaryPoint {
+    var latitude: Double!
+    var longitude: Double!
+    
+    init(latitude: Double, longitude: Double)
+    {
+        self.latitude = latitude
+        self.longitude = longitude
+    }
+    
+    init()
+    {
+        
     }
 }
