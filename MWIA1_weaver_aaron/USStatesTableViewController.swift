@@ -11,8 +11,11 @@ import UIKit
 class USStatesTableViewController: UITableViewController {
     
     var states: StatesActions!
+    var statesDict: Dictionary<String, [StateInformation]>!
     var stateSectionTitles: [(String)]!
     var numberOfHeaders: Int!
+    var statesVisitedCount: Int!
+    @IBOutlet weak var statesVisitedCountLabel: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +24,19 @@ class USStatesTableViewController: UITableViewController {
         states = StatesActions(jsonFileName: "states")
         numberOfHeaders = states.getNumberOfStateGroups()
         stateSectionTitles = states.getSortedListOfIndexLetters()
+        statesDict = states.statesDict
+        self.statesVisitedCount = 0
+        
+        for (key, value) in statesDict
+        {
+            for element in value
+            {
+                if element.stateVisited == true
+                {
+                    self.statesVisitedCount = self.statesVisitedCount + 1
+                }
+            }
+        }
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -34,7 +50,7 @@ class USStatesTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return states.getStatesBeginningWithLetter(self.stateSectionTitles[section]).count
+        return statesDict[self.stateSectionTitles[section]]!.count
     }
     
     override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -50,6 +66,10 @@ class USStatesTableViewController: UITableViewController {
         return headerCell
     }
     
+    override func tableView(tableView: UITableView, accessoryButtonTappedForRowWithIndexPath indexPath: NSIndexPath) {
+        self.performSegueWithIdentifier("stateDetailSegue", sender: self.tableView.cellForRowAtIndexPath(indexPath))
+    }
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         var stateInfoCell = self.tableView.dequeueReusableCellWithIdentifier("StateInfoCell") as? StateInformationCell
@@ -60,25 +80,76 @@ class USStatesTableViewController: UITableViewController {
             stateInfoCell = nibs[0] as? StateInformationCell
         }
         
-        let stateInCell: StateInformation! = states.getStatesBeginningWithLetter(self.stateSectionTitles[indexPath.section])![indexPath.row]
+        let stateInCell: StateInformation! = statesDict[self.stateSectionTitles[indexPath.section]]![indexPath.row]
         
         let cellTitle: String! = stateInCell!.stateTitle!
         let cellSubTitle: String! = stateInCell!.stateSubTitle!
         
         stateInfoCell!.StateTitleLabel!.text = cellTitle!
         stateInfoCell!.StateSubtitleLabel!.text = cellSubTitle!
+        stateInfoCell!.backgroundColor = UIColor.whiteColor()
+        
+        if stateInCell.stateVisited == true
+        {
+            stateInfoCell!.backgroundColor = UIColor.greenColor()
+        }
+        else
+        {
+            stateInfoCell!.backgroundColor = UIColor.whiteColor()
+        }
         
         return stateInfoCell!
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        self.performSegueWithIdentifier("stateDetailSegue", sender: self)
+    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+//        
+//        let stateInCell: StateInformation! = self.statesDict[self.stateSectionTitles[indexPath.section]]![indexPath.row]
+//        
+//        if stateInCell.stateVisited! == true
+//        {
+//            print(stateInCell.stateTitle)
+//            cell.backgroundColor = UIColor.greenColor()
+//        }
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        let stateInCell: StateInformation! = self.statesDict[self.stateSectionTitles[indexPath.section]]![indexPath.row]
+        
+        if stateInCell.stateVisited == false
+        {
+            print("Visited")
+            stateInCell.stateVisited = true
+            self.statesVisitedCount = self.statesVisitedCount + 1
+            self.updateVisitCount()
+            self.tableView.reloadData()
+        }
+        else
+        {
+            let alert = UIAlertController(title: "Unvisit State", message: "Reset visitation status for \(stateInCell.stateTitle!)?", preferredStyle: UIAlertControllerStyle.Alert)
+            
+            alert.addAction(UIAlertAction(title: "Yes", style: UIAlertActionStyle.Default, handler: {
+                (alert: UIAlertAction!) in
+                
+                stateInCell.stateVisited = false
+                self.statesVisitedCount = self.statesVisitedCount - 1
+                self.updateVisitCount()
+                self.tableView.reloadData()
+                
+                self.tableView.reloadData()
+            }))
+            alert.addAction(UIAlertAction(title: "No", style: UIAlertActionStyle.Default, handler: {
+                (alert: UIAlertAction!) in
+            }))
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        
         let detailView: StateViewController  = segue.destinationViewController as! StateViewController
-        let selectedRow: NSIndexPath = self.tableView.indexPathForSelectedRow!
-        let stateInCell: StateInformation! = states.getStatesBeginningWithLetter(self.stateSectionTitles[selectedRow.section])![selectedRow.row]
+        let selectedRow: NSIndexPath = self.tableView.indexPathForCell(sender as! UITableViewCell)!
+        let stateInCell: StateInformation! = statesDict[self.stateSectionTitles[selectedRow.section]]![selectedRow.row]
         detailView.stateInfo = stateInCell
     }
     
@@ -89,5 +160,35 @@ class USStatesTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 75
+    }
+    
+    private func updateVisitCount()
+    {
+        self.statesVisitedCountLabel.title = "Visited:\(self.statesVisitedCount)"
+    }
+    
+    @IBAction func resetButtonPressed(sender: UIBarButtonItem)
+    {
+        let alert = UIAlertController(title: "Clear States Visited", message: "Would you like to reset all states visited back to 0?", preferredStyle: UIAlertControllerStyle.Alert)
+        
+        alert.addAction(UIAlertAction(title: "Yes", style: UIAlertActionStyle.Default, handler: {
+            (alert: UIAlertAction!) in
+            
+            self.statesVisitedCount = 0
+            self.updateVisitCount()
+            
+            for (key, value) in self.statesDict
+            {
+                for element in value
+                {
+                    element.stateVisited = false
+                }
+            }
+            self.tableView.reloadData()
+        }))
+        alert.addAction(UIAlertAction(title: "No", style: UIAlertActionStyle.Default, handler: {
+            (alert: UIAlertAction!) in
+        }))
+        self.presentViewController(alert, animated: true, completion: nil)
     }
 }

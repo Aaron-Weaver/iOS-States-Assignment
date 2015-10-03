@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -11,22 +11,25 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="75"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="san-Ov-rCR" id="CTJ-Kj-tzd">
-                <rect key="frame" x="0.0" y="0.0" width="253" height="74"/>
+                <rect key="frame" x="0.0" y="0.0" width="253" height="74.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tpV-8f-rJZ">
                         <rect key="frame" x="33" y="8" width="212" height="24"/>
+                        <animations/>
                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CIG-uO-0XV">
                         <rect key="frame" x="33" y="40" width="212" height="21"/>
+                        <animations/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <animations/>
                 <constraints>
                     <constraint firstItem="CIG-uO-0XV" firstAttribute="leading" secondItem="CTJ-Kj-tzd" secondAttribute="leadingMargin" constant="25" id="8bD-OG-X9C"/>
                     <constraint firstAttribute="topMargin" secondItem="tpV-8f-rJZ" secondAttribute="top" id="UN8-XK-uhM"/>
@@ -34,6 +37,7 @@
                     <constraint firstItem="tpV-8f-rJZ" firstAttribute="leading" secondItem="CTJ-Kj-tzd" secondAttribute="leadingMargin" constant="25" id="vCJ-oe-jfs"/>
                 </constraints>
             </tableViewCellContentView>
+            <animations/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="CIG-uO-0XV" secondAttribute="trailing" constant="75" id="6Wx-3c-CFz"/>
                 <constraint firstAttribute="trailing" secondItem="tpV-8f-rJZ" secondAttribute="trailing" constant="75" id="V9D-GG-pbE"/>

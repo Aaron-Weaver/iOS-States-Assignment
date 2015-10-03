@@ -101,6 +101,7 @@ class StatesActions
                                     for element in stateGroup
                                     {
                                         let stateInfo = StateInformation(stateTitle: String(element["name"]!), stateSubTitle: String(element["nickname"]!))
+                                        stateInfo.stateVisited = false
                                         stateInfo.stateBoundaries = self.getBoundariesForState("state_boundaries", stateName: stateInfo.stateTitle!)
                                         
                                         for element in stateInfo.stateBoundaries!
